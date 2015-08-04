@@ -174,9 +174,3 @@ This has been a very brief intro into the what, why and how of design principles
 ## Resources
 
 - [Principles of Object-Oriented Design, an Agile Primer - Sandi Metz](http://www.poodr.com/)
-
-
-
-
-
-
