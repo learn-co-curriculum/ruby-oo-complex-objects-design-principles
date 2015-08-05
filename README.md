@@ -138,18 +138,18 @@ Our new `coupon` method is what is referred to as a **helper method**. It functi
 Another OO principle states that methods should not exceed 5 lines of code and classes should not exceed 100. While these principles are not hard and fast rules, they should guide us whenever possible. We should always be on the lookout for ways to pare down our code. Let's take another look at our `checkout` method. 
 
 ```ruby
-ef checkout
+def checkout
     total = 0
     #the shopping_cart method holds an array of all the user's items
     shopping_cart.each do |item|
       total += item.price
     end
     
-    total = coupon/total if coupon
+    total = coupon / total if coupon
     
     total
     
-  end
+end
 ```
 
 Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating of the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0 *and*, the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
