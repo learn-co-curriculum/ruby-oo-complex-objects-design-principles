@@ -138,7 +138,7 @@ Our new `coupon` method is what is referred to as a **helper method**. It functi
 Another OO principle states that methods should not exceed 5 lines of code and classes should not exceed 100. While these principles are not hard and fast rules, they should guide us whenever possible. We should always be on the lookout for ways to pare down our code. Let's take another look at our `checkout` method. 
 
 ```ruby
-ef checkout
+def checkout
     total = 0
     #the shopping_cart method holds an array of all the user's items
     shopping_cart.each do |item|
