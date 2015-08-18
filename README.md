@@ -38,7 +38,7 @@ The study of and refinement of the principles of object oriented design will tak
 
 ### The Single Responsibility Principle and Separation of Concerns
 
-The single responsibility principle is the idea that classes in object oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discreet sections. 
+The single responsibility principle is the idea that classes in object oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
 
 Let's take the example of an online shopping web application. Such an application has a number of jobs to handle: we need to have users that sign in and purchase items, we have the items themselves that we are selling, we likely have a shopping cart as well. We could develop an application that that takes care of all of these jobs in the following manner: 
 
@@ -140,7 +140,7 @@ Our new `coupon` method is what is referred to as a **helper method**. It functi
 Another OO principle states that methods should not exceed 5 lines of code and classes should not exceed 100. While these principles are not hard and fast rules, they should guide us whenever possible. We should always be on the lookout for ways to pare down our code. Let's take another look at our `checkout` method. 
 
 ```ruby
-ef checkout
+def checkout
     total = 0
     #the shopping_cart method holds an array of all the user's items
     shopping_cart.each do |item|
