@@ -159,7 +159,7 @@ Sure enough, a quick google search of "sum an array of value ruby" returns some 
 
 ```ruby
 def checkout
-  total = shopping cart.inject {|sum, item| sum += item.price}
+  total = shopping_cart.inject {|sum, item| sum += item.price}
   
   ...
 end
