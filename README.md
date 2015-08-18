@@ -77,13 +77,13 @@ end
 
 As you can see, our code starts to deteriorate relatively quickly. How can we give an item a price? How can we retrieve that price later? What happens when our program needs to grow to accommodate a feature like coupons? Will we continue to add code to this one file? What happens if our program breaks? How will we determine which of our many methods is responsible for the bug? 
 
-Instead, we want to separate the concerns, or responsibilities, of such an application, wrapping each concern in its own class that produces its own objects. We could write a User class, an Item class and a Shopping Cart class. The User class should be responsible for assigning a user a name and other details and signing a user in and out. The Item class should have methods that describe an item's attributes, including its price. The Shopping Cart class can collect individual item objects and total their price at the time of checkout. By creating classes with their own responsibilities, we create an application that is organized, logical, and accommodates future change. We also create a program that doesn't give us a headache to even look at. 
+Instead, we want to separate the concerns, or responsibilities, of such an application, wrapping each concern in its own class that produces its own objects. We could write a User class, an `Item` class and a `ShoppingCart` class. The User class should be responsible for assigning a user a name and other details and signing a user in and out. The Item class should have methods that describe an item's attributes, including its price. The `ShoppingCart` class can collect individual item objects and total their price at the time of checkout. By creating classes with their own responsibilities, we create an application that is organized, logical, and accommodates future change. We also create a program that doesn't give us a headache to even look at. 
 
 ### Abstraction and Don't Repeat Yourself (DRY)
 
 Another basic OO principle is that of DRY. If you find yourself repeating the same lines of code again and again, that is a good candidate for refactoring. As programmers, we are lazy (in a good way!), we are always looking for ways to achieve the desired behavior by writing less code, and we hate to repeat ourselves. Let's take a look at an example by revisiting our online shopping application. 
 
-Lately, our client has been offering a variety of discounts. At the time of checkout, a user can tell our application that they have a 10, 25, or 50 percent discount. So, our program needs to determine if a user has a discount and then apply it, if present. Let's take a look at the `checkout` method of our Shopping Cart class.
+Lately, our client has been offering a variety of discounts. At the time of checkout, a user can tell our application that they have a 10, 25, or 50 percent discount. So, our program needs to determine if a user has a discount and then apply it, if present. Let's take a look at the `checkout` method of our `ShoppingCart` class.
 
 ```ruby
 def checkout(discount=number)
@@ -108,10 +108,12 @@ end
 
 In the above method, we are using an if/elsif statement to determine what kind of discount a user has, if any, and then doing some math to calculate the appropriate total. In order to take a discount into account, we are using six lines of code every time we checkout a user! That's a lot of repetition. Additionally, what if our application needs to apply coupons to a user's total *before* they checkout? Maybe our client has decided to give their user's 20% on their current total if they refer a friend to the site. We would have to use the same if/elsif statement elsewhere in our code. That's a lot of code to constantly re-type. 
 
+**Top-Tip:** If you find yoursel copy/pasting the same lines of code more than three times in order to re-use it throughout your program, consider it a "code smell". A code smell is a sign that you should refactor.
+
 Let's refactor this by creating a `coupon` attr_accessor. Then, our checkout method can simply use the coupon method to help it calculate the user's total:
 
 ```ruby
-class Shopping Cart
+class ShoppingCart
   attr_accessor :coupon
   
   def checkout
@@ -159,7 +161,7 @@ Sure enough, a quick google search of "sum an array of value ruby" returns some 
 
 ```ruby
 def checkout
-  total = shopping cart.inject {|sum, item| sum + item.price}
+  total = shopping_cart.inject {|sum, item| sum + item.price}
   
   ...
 end
