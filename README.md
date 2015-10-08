@@ -154,7 +154,7 @@ def checkout
   end
 ```
 
-Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating of the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0 *and*, the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
+Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating over the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0 *and*, the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
 
 Sure enough, a quick google search of "sum an array of value ruby" returns some info on the [`inject` method](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject). Let's implement our refactor: 
 
