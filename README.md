@@ -19,7 +19,7 @@ There is another reason why we value design principles as object oriented progra
 > 
 > -Yukihiro Matsumoto,  *The Philosophy of Ruby, A Conversation with Yukihiro Matsumoto, Part I*
 
-As programers, we combine the functions of inventors and artists and the code we write should be designed to function well, be flexible to accommodate future change, and be organized in a sensical, logical, even beautiful way. In the words of Sandi Metz, author of Principles of Object Oriented Design (POODR), 
+As programmers, we combine the functions of inventors and artists and the code we write should be designed to function well, be flexible to accommodate future change, and be organized in a sensical, logical, even beautiful way. In the words of Sandi Metz, author of Principles of Object Oriented Design (POODR), 
 
 > We are modern craftspeople, building structures that make up present-day reality, and no less than bricklayers or bridge builders, we take justifiable pride in our accomplishments. 
 > 
