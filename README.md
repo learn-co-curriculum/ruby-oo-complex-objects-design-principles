@@ -182,3 +182,5 @@ This has been a very brief intro into the what, why and how of design principles
 
 
 
+
+<a href='https://learn.co/lessons/design-principles-readme' data-visibility='hidden'>View this lesson on Learn.co</a>
