@@ -1,4 +1,4 @@
-# Principles of Object Oriented Design
+# Principles of Object-Oriented Design
 
 ## Objectives
 
@@ -19,22 +19,22 @@ There is another reason why we value design principles as object oriented progra
 > 
 > -Yukihiro Matsumoto,  *The Philosophy of Ruby, A Conversation with Yukihiro Matsumoto, Part I*
 
-As programmers, we combine the functions of inventors and artists and the code we write should be designed to function well, be flexible to accommodate future change, and be organized in a sensical, logical, even beautiful way. In the words of Sandi Metz, author of Principles of Object Oriented Design (POODR), 
+As programmers, we combine the functions of inventors and artists and the code we write should be designed to function well, be flexible to accommodate future change, and be organized in a sensical, logical, even beautiful way. In the words of Sandi Metz, author of Practical Object-Oriented Design in Ruby  (POODR), 
 
 > We are modern craftspeople, building structures that make up present-day reality, and no less than bricklayers or bridge builders, we take justifiable pride in our accomplishments. 
 > 
-> -Sandi Metz, *Principles of Object Oriented Design*
+> -Sandi Metz, *Practical Object-Oriented Design in Ruby*
 
 
 ## Basic Design Principles
 
 The study of and refinement of the principles of object oriented design will take place over decades of a programmer's life and career. This reading is meant to function as a very basic introduction to the what and why of object oriented design. Here, we'll briefly discuss some of the basic principles. Keep these principles in mind as you continue to learn more about object oriented Ruby and revisit them in your future work. 
 
-### What are Object Oriented Design Principles?
+### What are Object-Oriented Design Principles?
 
 >Design is not the act of following a fixed set of rules, it’s a journey along a branching path wherein earlier choices close off some options and open access to others. During design you wander through a maze of requirements where every juncture represents a decision point that has consequences for the future. Just as a sculptor has chisels and files, an object-oriented designer has tools—principles and patterns.
 > 
-> -Sandi Metz, *Principles of Object Oriented Design*
+> -Sandi Metz, *Principles of Object-Oriented Design*
 
 ### The Single Responsibility Principle and Separation of Concerns
 
@@ -175,7 +175,7 @@ This has been a very brief intro into the what, why and how of design principles
 
 ## Resources
 
-- [Principles of Object-Oriented Design, an Agile Primer - Sandi Metz](http://www.poodr.com/)
+- [Principles of Object-Oriented Design in Ruby, an Agile Primer - Sandi Metz](http://www.poodr.com/)
 
 
 
