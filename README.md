@@ -2,8 +2,8 @@
 
 ## Objectives
 
-1. Undestand what is meant by "design" in the context of coding.
-2. Understand why design principles are important for you as a programmer.
+1. Define "design" in the context of coding.
+2. Explain why design principles are important for you as a programmer.
 3. Learn some of the basic design principles that object orientated programmers employ. 
 
 
