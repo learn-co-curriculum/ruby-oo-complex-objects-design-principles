@@ -40,7 +40,7 @@ The study of and refinement of the principles of object oriented design will tak
 
 The single responsibility principle is the idea that classes in object oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
 
-Let's take the example of an online shopping web application. Such an application has a number of jobs to handle: we need to have users that sign in and purchase items, we have the items themselves that we are selling, we likely have a shopping cart as well. We could develop an application that that takes care of all of these jobs in the following manner: 
+Let's take the example of an online shopping web application. Such an application has a number of jobs to handle: we need to have users that sign in and purchase items, we have the items themselves that we are selling, we likely have a shopping cart as well. We could develop an application that takes care of all of these jobs in the following manner: 
 
 ```ruby
 class MyStore
@@ -53,7 +53,7 @@ class MyStore
     @user
   end
   
-  def item(item_name)
+  def item(item)
     @item = item
   end
   
@@ -184,3 +184,5 @@ This has been a very brief intro into the what, why and how of design principles
 
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme' title='Principles of Object-Oriented Design'>Principles of Object-Oriented Design</a> on Learn.co and start learning to code for free.</p>
+
+<p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme'>Basic Design Principles</a> on Learn.co and start learning to code for free.</p>
