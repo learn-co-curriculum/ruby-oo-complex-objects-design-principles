@@ -86,7 +86,7 @@ Another basic OO principle is that of DRY. If you find yourself repeating the sa
 Lately, our client has been offering a variety of discounts. At the time of checkout, a user can tell our application that they have a 10, 25, or 50 percent discount. So, our program needs to determine if a user has a discount and then apply it, if present. Let's take a look at the `checkout` method of our `ShoppingCart` class.
 
 ```ruby
-def checkout(discount=number)
+def checkout(discount=0)
   total = 0
   #the shopping_cart method holds an array of all the user's items
   shopping_cart.each do |item|
@@ -94,11 +94,11 @@ def checkout(discount=number)
   end
   
   if discount == 10
-    total = 10/total
+    total = total - total * 10 / 100.00
   elsif discount == 20
-    total = 20/total
+    total = total - total * 20 / 100.00
   elsif discount == 50
-    total = 50/total
+    total = total - total * 50 / 100.00
   end
   
   total
@@ -123,7 +123,9 @@ class ShoppingCart
       total += item.price
     end
     
-    total = coupon/total if coupon
+    if coupon
+      total = total - total * coupon / 100.00
+    end
     
     total
     
@@ -147,7 +149,9 @@ def checkout
       total += item.price
     end
     
-    total = coupon/total if coupon
+    if coupon
+      total = total - total * coupon / 100.00
+    end
     
     total
     
