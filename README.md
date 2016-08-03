@@ -108,7 +108,7 @@ end
 
 In the above method, we are using an if/elsif statement to determine what kind of discount a user has, if any, and then doing some math to calculate the appropriate total. In order to take a discount into account, we are using six lines of code every time we checkout a user! That's a lot of repetition. Additionally, what if our application needs to apply coupons to a user's total *before* they checkout? Maybe our client has decided to give their user's 20% on their current total if they refer a friend to the site. We would have to use the same if/elsif statement elsewhere in our code. That's a lot of code to constantly re-type. 
 
-**Top-Tip:** If you find yoursel copy/pasting the same lines of code more than three times in order to re-use it throughout your program, consider it a "code smell". A code smell is a sign that you should refactor.
+**Top-Tip:** If you find yourself copy/pasting the same lines of code more than three times in order to re-use it throughout your program, consider it a "code smell". A code smell is a sign that you should refactor.
 
 Let's refactor this by creating a `coupon` attr_accessor. Then, our checkout method can simply use the coupon method to help it calculate the user's total:
 
@@ -190,3 +190,5 @@ This has been a very brief intro into the what, why and how of design principles
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme' title='Principles of Object-Oriented Design'>Principles of Object-Oriented Design</a> on Learn.co and start learning to code for free.</p>
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme'>Basic Design Principles</a> on Learn.co and start learning to code for free.</p>
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/design-principles-readme'>OO Design</a> on Learn.co and start learning to code for free.</p>
