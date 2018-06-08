@@ -133,7 +133,7 @@ class ShoppingCart
 end
 ```
 
-We've achieved the same behavior with less code. This refactor has the added benefit of being *flexible*, meaning it will accommodate future change. If our client decides to added a new type of coupon, a 23% off discount, the coupon method, having *abstracted* away the value of the coupon, will still work. This is the benefit of abstraction, and we prefer abstracting out attributes by wrapping them inside methods over having our code rely on literal values.  
+We've achieved the same behavior with less code. This refactor has the added benefit of being *flexible*, meaning it will accommodate future change. If our client decides to add a new type of coupon, a 23% off discount, the coupon method, having *abstracted* away the value of the coupon, will still work. This is the benefit of abstraction, and we prefer abstracting out attributes by wrapping them inside methods over having our code rely on literal values.  
 
 Our new `coupon` method is what is referred to as a **helper method**. It functions to assist our `checkout` method and is called inside the checkout method. 
 
