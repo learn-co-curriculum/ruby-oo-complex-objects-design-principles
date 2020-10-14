@@ -180,15 +180,3 @@ This has been a very brief intro into the what, why and how of design principles
 ## Resources
 
 - [Principles of Object-Oriented Design in Ruby, an Agile Primer - Sandi Metz](http://www.poodr.com/)
-
-
-
-
-
-
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme' title='Principles of Object-Oriented Design'>Principles of Object-Oriented Design</a> on Learn.co and start learning to code for free.</p>
-
-<p data-visibility='hidden'>View <a href='https://learn.co/lessons/design-principles-readme'>Basic Design Principles</a> on Learn.co and start learning to code for free.</p>
-
-<p class='util--hide'>View <a href='https://learn.co/lessons/design-principles-readme'>OO Design</a> on Learn.co and start learning to code for free.</p>
