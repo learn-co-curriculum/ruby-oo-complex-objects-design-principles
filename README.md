@@ -4,7 +4,7 @@
 
 1. Define "design" in the context of coding.
 2. Explain why design principles are important for you as a programmer.
-3. Learn some of the basic design principles that object orientated programmers employ. 
+3. Learn some of the basic design principles that object-oriented programmers employ. 
 
 
 ## What is Code Design and Why Implement It?
@@ -13,7 +13,7 @@ A program's *design* refers to the manner in which you, the programmer, organize
 
 As programmers, we must code for the future. What does that mean? It means that, inevitably, our programs will grow and require change. Let's say you wrote a super cool web application that becomes wildly popular––how will your program change to accommodate more users and more traffic and the needs of those users? On the other hand, let's say you build an amazing application for a client who then changes their mind about an important feature. What do you do? Scrap all of your work and begin again? By writing code that is flexible and accommodates change, you won't have to. 
 
-There is another reason why we value design principles as object oriented programmers––our own happiness. Especially as Rubyists, working in a language specifically designed to be a pleasure to work with, we care about making programs that are a pleasure to code and a pleasure for others to work with. 
+There is another reason why we value design principles as object-oriented programmers––our own happiness. Especially as Rubyists, working in a language specifically designed to be a pleasure to work with, we care about making programs that are a pleasure to code and a pleasure for others to work with. 
 
 > ... we need to focus on humans, on how humans care about doing programming or operating the application of the machines.
 > 
@@ -28,7 +28,7 @@ As programmers, we combine the functions of inventors and artists and the code w
 
 ## Basic Design Principles
 
-The study of and refinement of the principles of object oriented design will take place over decades of a programmer's life and career. This reading is meant to function as a very basic introduction to the what and why of object oriented design. Here, we'll briefly discuss some of the basic principles. Keep these principles in mind as you continue to learn more about object oriented Ruby and revisit them in your future work. 
+The study of and refinement of the principles of object-oriented design will take place over decades of a programmer's life and career. This reading is meant to function as a very basic introduction to the what and why of object-oriented design. Here, we'll briefly discuss some of the basic principles. Keep these principles in mind as you continue to learn more about object-oriented Ruby and revisit them in your future work. 
 
 ### What are Object-Oriented Design Principles?
 
@@ -38,7 +38,7 @@ The study of and refinement of the principles of object oriented design will tak
 
 ### The Single Responsibility Principle and Separation of Concerns
 
-The single responsibility principle is the idea that classes in object oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
+The single responsibility principle is the idea that classes in object-oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
 
 Let's take the example of an online shopping web application. Such an application has a number of jobs to handle: we need to have users that sign in and purchase items, we have the items themselves that we are selling, we likely have a shopping cart as well. We could develop an application that takes care of all of these jobs in the following manner: 
 
@@ -106,7 +106,7 @@ def checkout(discount=0)
 end
 ``` 
 
-In the above method, we are using an if/elsif statement to determine what kind of discount a user has, if any, and then doing some math to calculate the appropriate total. In order to take a discount into account, we are using six lines of code every time we checkout a user! That's a lot of repetition. Additionally, what if our application needs to apply coupons to a user's total *before* they checkout? Maybe our client has decided to give their users 20% on their current total if they refer a friend to the site. We would have to use the same if/elsif statement elsewhere in our code. That's a lot of code to constantly re-type. 
+In the above method, we are using an if/elsif statement to determine what kind of discount a user has, if any, and then doing some math to calculate the appropriate total. In order to take a discount into account, we are using six lines of code every time we check out a user! That's a lot of repetition. Additionally, what if our application needs to apply coupons to a user's total *before* they check out? Maybe our client has decided to give their users 20% on their current total if they refer a friend to the site. We would have to use the same if/elsif statement elsewhere in our code. That's a lot of code to constantly re-type. 
 
 **Top-Tip:** If you find yourself copy/pasting the same lines of code more than three times in order to re-use it throughout your program, consider it a "code smell". A code smell is a sign that you should refactor.
 
@@ -158,9 +158,9 @@ def checkout
   end
 ```
 
-Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating over the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0 *and*, the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
+Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating over the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0, *and* the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
 
-Sure enough, a quick google search of "sum an array of value ruby" returns some info on the [`inject` method](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject). Let's implement our refactor: 
+Sure enough, a quick google search of "sum an array of values ruby" returns some info on the [`inject` method](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject). Let's implement our refactor: 
 
 
 ```ruby
@@ -175,7 +175,7 @@ Much better!
 
 ## Conclusion
 
-This has been a very brief intro into the what, why and how of design principles in object oriented Ruby. These principles are meant to guide you, not limit you. These principles are also just the very tip of the OO design iceberg. You'll learn more about design over the remainder of this course and you'll learn even more about design over the course of the rest of your programming life. Check out the resource below, Sandi Metz's book on object oriented design, to go  deeper. This book is a great resource. It is highly respected among object oriented Rubyists and you'll likely encounter the principles she discusses in your professional programming life. Even if you don't read it all now, try the first few chapters and then go deeper into it after you've learned more. 
+This has been a very brief intro into the what, why and how of design principles in object-oriented Ruby. These principles are meant to guide you, not limit you. These principles are also just the very tip of the OO design iceberg. You'll learn more about design over the remainder of this course and you'll learn even more about design over the course of the rest of your programming life. Check out the resource below, Sandi Metz's book on object-oriented design, to go  deeper. This book is a great resource. It is highly respected among object-oriented Rubyists and you'll likely encounter the principles she discusses in your professional programming life. Even if you don't read it all now, try the first few chapters and then go deeper into it after you've learned more. 
 
 ## Resources
 
