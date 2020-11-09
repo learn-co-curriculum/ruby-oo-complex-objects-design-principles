@@ -13,7 +13,7 @@ A program's *design* refers to the manner in which you, the programmer, organize
 
 As programmers, we must code for the future. What does that mean? It means that, inevitably, our programs will grow and require change. Let's say you wrote a super cool web application that becomes wildly popular––how will your program change to accommodate more users and more traffic and the needs of those users? On the other hand, let's say you build an amazing application for a client who then changes their mind about an important feature. What do you do? Scrap all of your work and begin again? By writing code that is flexible and accommodates change, you won't have to. 
 
-There is another reason why we value design principles as object-oriented programmers––our own happiness. Especially as Rubyists, working in a language specifically designed to be a pleasure to work with, we care about making programs that are a pleasure to code and a pleasure for others to work with. 
+There is another reason why we value design principles as object-oriented programmers &mdash; our own happiness. Especially as Rubyists, working in a language specifically designed to be a pleasure to work with, we care about making programs that are a pleasure to code and a pleasure for others to work with. 
 
 > ... we need to focus on humans, on how humans care about doing programming or operating the application of the machines.
 > 
@@ -32,13 +32,13 @@ The study of and refinement of the principles of object-oriented design will tak
 
 ### What are Object-Oriented Design Principles?
 
->Design is not the act of following a fixed set of rules, it’s a journey along a branching path wherein earlier choices close off some options and open access to others. During design you wander through a maze of requirements where every juncture represents a decision point that has consequences for the future. Just as a sculptor has chisels and files, an object-oriented designer has tools—principles and patterns.
+>Design is not the act of following a fixed set of rules, it’s a journey along a branching path wherein earlier choices close off some options and open access to others. During design you wander through a maze of requirements where every juncture represents a decision point that has consequences for the future. Just as a sculptor has chisels and files, an object-oriented designer has tools &mdash; principles and patterns.
 > 
 > -Sandi Metz, *Principles of Object-Oriented Design*
 
 ### The Single Responsibility Principle and Separation of Concerns
 
-The single responsibility principle is the idea that classes in object-oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns––the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
+The single responsibility principle is the idea that classes in object-oriented programming should have one job, one responsibility, and their services (i.e., methods) should be narrowly aligned with that responsibility. This principle goes hand in hand with the separation of concerns &mdash; the idea that the various responsibilities, or concerns, of a computer program should be separated out into discrete sections. 
 
 Let's take the example of an online shopping web application. Such an application has a number of jobs to handle: we need to have users that sign in and purchase items, we have the items themselves that we are selling, we likely have a shopping cart as well. We could develop an application that takes care of all of these jobs in the following manner: 
 
@@ -77,7 +77,7 @@ end
 
 As you can see, our code starts to deteriorate relatively quickly. How can we give an item a price? How can we retrieve that price later? What happens when our program needs to grow to accommodate a feature like coupons? Will we continue to add code to this one file? What happens if our program breaks? How will we determine which of our many methods is responsible for the bug? 
 
-Instead, we want to separate the concerns, or responsibilities, of such an application, wrapping each concern in its own class that produces its own objects. We could write a User class, an `Item` class and a `ShoppingCart` class. The User class should be responsible for assigning a user a name and other details and signing a user in and out. The Item class should have methods that describe an item's attributes, including its price. The `ShoppingCart` class can collect individual item objects and total their price at the time of checkout. By creating classes with their own responsibilities, we create an application that is organized, logical, and accommodates future change. We also create a program that doesn't give us a headache to even look at. 
+Instead, we want to separate the concerns, or responsibilities, of such an application, wrapping each concern in its own class that produces its own objects. We could write a `User` class, an `Item` class and a `ShoppingCart` class. The `User` class should be responsible for assigning a user a name and other details and signing a user in and out. The `Item` class should have methods that describe an item's attributes, including its price. The `ShoppingCart` class can collect individual item objects and total their price at the time of checkout. By creating classes with their own responsibilities, we create an application that is organized, logical, and accommodates future change. We also create a program that doesn't give us a headache to even look at. 
 
 ### Abstraction and Don't Repeat Yourself (DRY)
 
@@ -158,7 +158,7 @@ def checkout
   end
 ```
 
-Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating over the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell"––we are using several lines of code to complete a simple task, our code currently requires us to create a variable and set it equal to the placeholder value of 0, *and* the task of finding the sum of a set of numbers seems like a simple and common task that shouldn't require this much work. 
+Notice that we are trying to collect the prices of every item in our cart. We are doing so by creating a new variable, `total`, setting it equal to 0, iterating over the array of items and incrementing the `total` by the price of each item. That's a lot of code! This code has what we might term a "code smell" &mdash; we are using several lines of code just to find the sum of a set of numbers. This seems like a simple and common task that shouldn't require this much work.
 
 Sure enough, a quick google search of "sum an array of values ruby" returns some info on the [`inject` method](http://ruby-doc.org/core-1.9.3/Enumerable.html#method-i-inject). Let's implement our refactor: 
 
