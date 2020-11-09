@@ -1,4 +1,4 @@
-# Principles of Object-Oriented Design
+# Object Design Principles
 
 ## Objectives
 
